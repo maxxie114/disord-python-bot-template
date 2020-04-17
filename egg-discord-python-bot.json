@@ -3,7 +3,7 @@
     "meta": {
         "version": "PTDL_v1"
     },
-    "exported_at": "2020-04-17T00:54:52-04:00",
+    "exported_at": "2020-04-17T02:01:25-04:00",
     "name": "discord-python-bot",
     "author": "panel@2b2tmcpe.org",
     "description": "This is an egg for running discord bot coded using discord.py with a template bot.",
@@ -17,7 +17,7 @@
     },
     "scripts": {
         "installation": {
-            "script": "#!\/bin\/ash\r\n# Server Files: \/mnt\/server\r\napk add --no-cache git gcc g++ libffi-dev make build-base\r\n\r\ncd \/mnt\/server\r\n\r\necho \"Cloning pixel-bot repo\"\r\ngit clone https:\/\/github.com\/maxxie114\/disord-python-bot-template.git .\r\n\r\necho \"Installing python requirements into folder\"\r\npip install -U --target $(pwd) -r requirements.txt",
+            "script": "#!\/bin\/ash\r\n# Server Files: \/mnt\/server\r\napk add --no-cache git gcc g++ libffi-dev make build-base\r\n# Go to file directory\r\ncd \/mnt\/server\r\n# Cloning bot template\r\ngit clone https:\/\/github.com\/maxxie114\/disord-python-bot-template.git .\r\n# Installing all dependencies to the local directory\r\npip install -U --target $(pwd) -r requirements.txt",
             "container": "python:3.6-alpine3.7",
             "entrypoint": "ash"
         }
